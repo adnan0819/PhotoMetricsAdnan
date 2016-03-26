@@ -1,0 +1,28 @@
+function s=labelROI(gbvsmap)
+
+bw=im2bw();
+bw2=bw;
+%may need closing here
+L=bwlabel(bw);
+
+s = regionprops(L, 'Centroid');
+imshow(bw2)
+hold on
+for k = 1:numel(s)
+    c = s(k).Centroid;
+    text(c(1), c(2), sprintf('%d', k), ...
+        'HorizontalAlignment', 'center', ...
+        'VerticalAlignment', 'middle');
+end
+hold off
+
+s = regionprops(L, 'Centroid');
+imshow(bw2)
+hold on
+for k = 1:numel(s)
+    c(k) = s(k).Centroid;
+    text(c(1), c(2), sprintf('%d', k), ...
+        'HorizontalAlignment', 'center', ...
+        'VerticalAlignment', 'middle');
+end
+hold off

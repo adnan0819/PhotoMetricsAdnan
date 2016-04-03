@@ -3,7 +3,7 @@ function out = ittikochmap( img )
 params = makeGBVSParams;
 params.useIttiKochInsteadOfGBVS = 1;
 params.channels = 'CIO';
-params.verbose = 1;
+params.verbose = 0;
 params.unCenterBias = 0;
 
 %

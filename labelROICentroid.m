@@ -7,8 +7,9 @@ bw=im2bw(gbvsmap);
 %may need closing here
 L = bwlabel(bw);
 s = regionprops(L);
-figure;
-imshow(bw);
+distance=[];
+%figure;
+%imshow(bw);
 hold on
 for k = 1:numel(s)
     c = s(k).Centroid;
@@ -17,3 +18,5 @@ for k = 1:numel(s)
         'VerticalAlignment', 'middle');
 end
 hold off
+
+

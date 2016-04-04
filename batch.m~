@@ -9,12 +9,8 @@ for k = 1:numel(pics)
    
    %disp(normed);
     fprintf('{');
-   fprintf('"id": %d, "name": "%s" , "score:" %d', k, pics(k).name, ceil(normed));
-    if (k==numel(pics)) 
-        fprintf('}\n');
-    else
-        fprintf('},\n');
-    end
+   fprintf('"id": %d, "name": "%s" , "score:" %d \n', k, pics(k).name, ceil(normed));
+    if k==fprintf(',}');
    %json='"id:';
    %disp(json);
 end

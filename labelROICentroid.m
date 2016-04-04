@@ -8,8 +8,8 @@ bw=im2bw(gbvsmap);
 L = bwlabel(bw);
 s = regionprops(L);
 distance=[];
-%figure;
-%imshow(bw);
+figure;
+imshow(bw);
 hold on
 for k = 1:numel(s)
     c = s(k).Centroid;

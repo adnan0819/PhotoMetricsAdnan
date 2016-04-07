@@ -8,18 +8,21 @@ function normed=going(score, centroidOfSalientROI,fullArea,maxDim)
     sum=0;
     bench=0;
     for i=1:size(score,1)
+        %disp(i);
+        %disp(fullArea);
         %a=((maxDim/6)/(min(score(i,:))))/maxDim;
         %a=1/((max(score(i,:)))/(min(score(i,:))));
         %a=1/(maxDim/(min(score(i,:)))); THIS WORKS
-        a=(min(score(i,:)))/(maxDim*2/3);
-        b=(centroidOfSalientROI(i).Area/fullArea);
+        a=((min(score(i,:)))/(maxDim*2/3))*0.8;
+        b=(centroidOfSalientROI(i).Area/fullArea)*0.2;
+        %disp(centroidOfSalientROI(i).Area);
         bench=max(score(i,:));
         bench=bench*fullArea;
         t(i)=b;
         %disp(max(score(i,:)));
         %disp(min(score(i,:)));
         
-        normed=b/a;
+        normed=(b)/(a);
         %normed=((10*a)+(10*b))/2;
         %disp(normed);
         sum=(sum+(normed*1));

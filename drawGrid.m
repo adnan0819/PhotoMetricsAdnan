@@ -4,7 +4,7 @@ function m = drawGrid(in)
 in(1:ceil(h/3):end,:,:)=255; %# Change 1/3 row to white
 in(:,1:ceil(w/3):end,:) = 255;
 out=in;
-%imshow(out);
+imshow(out);
 
 one=[1,1];
 two=[floor(h/3),1];

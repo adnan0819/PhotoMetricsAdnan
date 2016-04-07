@@ -1,7 +1,7 @@
 
-% example of how to call gbvs with default params
+% calling for demo prototype
 
-img = imread('samplepics/4.jpg');
+img = imread('cameraman.tif');
 out_gbvs = gbvs(img);
 out_itti = ittikochmap(img);
 
@@ -26,4 +26,8 @@ title('GBVS map');
 subplot(2,3,6);
 imshow(out_itti.master_map_resized);
 title('Itti/Koch map');
+
+figure;
+
+imshow(out_itti.master_map_resized);
 

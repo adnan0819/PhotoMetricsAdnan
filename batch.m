@@ -1,6 +1,6 @@
 function [saliency, gridPoints, centroidOfSalientROI, dist, score, normed, normed2,pics] = batch()
     
-    pics = dir('TestImages/*.jpg');
+    pics = dir('test/indoors/*.jpg');
      
 for k = 1:numel(pics)
    img = imread(pics(k).name);
